@@ -1,3 +1,30 @@
-<p>hello</p>
-<app-navbar1></app-navbar1>
-<router-outlet></router-outlet>
+<div class="container" style="min-height: 2.5em"></div>
+<mat-toolbar>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-9">
+                <ul>
+                    <li (click)="changeTab('MAP')">map</li>
+                    <li (click)="changeTab('INVENTORY')">inventory</li>
+                    <li >In</li>
+                    <li >Track Process</li>
+                    <li >General Request</li>
+                </ul>
+            </div>
+            <div class="col-md-3" style="text-align: right;padding-right: 4em">
+                <h3 (click)="changeTab('DASHBOARD')">TekSystemNGO</h3>
+            </div>
+        </div>
+    </div>
+</mat-toolbar>
+<div class="container-fluid">
+    <div class="row" style="height: 80vh!important">
+        <div class="col-md-4">
+            <app-alert></app-alert>
+        </div>
+        <div class="col-md-8">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+
